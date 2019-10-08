@@ -20,7 +20,8 @@ app.get('/intersections',function(req,res){
   res.send(obj)
 })
 
-app.get('/walkside',function(req,res){
+app.get('/walkside/:longlat',function(req,res){
+  console.log(req.params.longlat)
   var obj = JSON.parse(fs.readFileSync('walkside.json', 'utf8'));
   res.send(obj)
 })
