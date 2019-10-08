@@ -21,8 +21,8 @@ app.get('/intersections',function(req,res){
 })
 
 app.post('/walkside',function(req,res){
-  console.log(req.body.longitude)
-  console.log(req.body.latitude)
+  console.log(req)
+  console.log(req)
   var obj = JSON.parse(fs.readFileSync('walkside.json', 'utf8'));
   res.send(obj)
 })
