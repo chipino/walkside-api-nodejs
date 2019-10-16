@@ -22,7 +22,7 @@ app.get('/intersections',function(req,res){
   res.send(obj)
 })
 
-app.post('/walkside',function(req,res){
+app.get('/walkside',function(req,res){
   var obj = JSON.parse(fs.readFileSync('walkside.json', 'utf8'));
   res.send(obj)
 })
